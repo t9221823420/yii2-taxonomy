@@ -4,7 +4,7 @@ namespace yozh\taxonomy\controllers;
 
 use yozh\taxonomy\models\DefaultModel;
 use yii\filters\AccessControl;
-use yii\web\Controller;
+use yozh\crud\controllers\DefaultController as Controller;
 
 use yozh\taxonomy\AssetsBundle;
 
