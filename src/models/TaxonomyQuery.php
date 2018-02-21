@@ -15,22 +15,13 @@ class TaxonomyQuery extends \kartik\tree\models\TreeQuery
 	 */
 	public function all( $db = null )
 	{
-		//$this->_initQuery();
+		$this->_initQuery();
 		return parent::all( $db );
 	}
 	
 	protected function _initQuery()
 	{
-		
-		if( isset( $this->where['id'] ) ) {
-			$this->where['taxonomy.id'] = $this->where['id'];
-			unset( $this->where['id'] );
-		}
-
-		return $this->select( '*' )
-		            ->leftJoin( 'tree', 'taxonomy.tree_id = tree.id' )
-		            ->addOrderBy( 'root, lft' )
-			;
+		return $this->addOrderBy( 'root, lft' );
 	}
 	
 	/**
@@ -39,7 +30,7 @@ class TaxonomyQuery extends \kartik\tree\models\TreeQuery
 	 */
 	public function one( $db = null )
 	{
-		//$this->_initQuery();
+		$this->_initQuery();
 		return parent::one( $db );
 	}
 }

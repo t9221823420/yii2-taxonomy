@@ -13,9 +13,15 @@ class Taxonomy extends \kartik\tree\models\Tree
 		return 'taxonomy';
 	}
 	
-	public static function find()
+	public static function find( $condition = [])
 	{
-		return new TaxonomyQuery( get_called_class() );
+		$q = new TaxonomyQuery( get_called_class() );
+		
+		if( !empty($condition) ){
+			$q->where($condition);
+		}
+		
+		return $q;
 	}
 	
 	

@@ -14,6 +14,7 @@
   "minimum-stability": "stable",
   "require": {
     "kartik-v/yii2-tree-manager": "@dev",
+    "kartik-v/yii2-icons": "dev-master",
     "yozh/yii2-base": "@dev",
     "yozh/yii2-crud-v1": "@dev"
   },

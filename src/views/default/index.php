@@ -5,14 +5,14 @@ use yozh\taxonomy\models\Taxonomy;
 use yozh\taxonomy\components\TreeViewWidget;
 use kartik\icons\Icon;
 
-include '_header.php';
+//include '_header.php';
 
 Icon::map($this, Icon::FA);
 
 ?>
-<div class="<?= "$modelId-$actionId" ?>">
+<div class="taxonomy-index">
 
-    <h1><?= Html::encode( $this->title ) ?></h1>
+    <h1><?= Html::encode( Yii::t('app', 'Taxonomy') ) ?></h1>
 	
 	<?= TreeViewWidget::widget( [
 		// single query fetch to render the tree

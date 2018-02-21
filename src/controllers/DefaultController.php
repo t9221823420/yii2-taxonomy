@@ -11,11 +11,6 @@ use yozh\taxonomy\AssetsBundle;
 class DefaultController extends Controller
 {
 	
-	protected static function primaryModel()
-	{
-		return DefaultModel::className();
-	}
-	
 	public function behaviors()
 	{
 		return [
@@ -34,7 +29,8 @@ class DefaultController extends Controller
 	public function actionIndex()
 	{
 		AssetsBundle::register( $this->view );
-		return $this->traitActionIndex();
+		return $this->render( 'index', [
+		] );
 	}
 	
 }
