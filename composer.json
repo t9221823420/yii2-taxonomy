@@ -19,7 +19,7 @@
     "yozh/yii2-crud-v1": "@dev"
   },
   "extra": {
-    "bootstrap": "yozh\\taxonomy\\Bootstrap"
+    "_bootstrap": "yozh\\taxonomy\\Bootstrap"
   },
   "autoload": {
     "psr-4": {
