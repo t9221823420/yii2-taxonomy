@@ -6,14 +6,14 @@ use yozh\taxonomy\models\DefaultModel;
 use yii\filters\AccessControl;
 use yozh\crud\controllers\DefaultController as Controller;
 
-use yozh\taxonomy\AssetsBundle;
+use yozh\taxonomy\AssetBundle;
 
 class DefaultController extends Controller
 {
 	
 	public function actionIndex()
 	{
-		AssetsBundle::register( $this->view );
+		AssetBundle::register( $this->view );
 		
 		return $this->render( 'index', [] );
 	}
