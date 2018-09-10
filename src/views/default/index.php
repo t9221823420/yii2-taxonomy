@@ -5,7 +5,7 @@ use yozh\taxonomy\models\Taxonomy;
 use yozh\taxonomy\components\TreeViewWidget;
 use kartik\icons\Icon;
 
-//include '_header.php';
+//include __DIR__ . '/_header.php';
 
 Icon::map($this, Icon::FA);
 
